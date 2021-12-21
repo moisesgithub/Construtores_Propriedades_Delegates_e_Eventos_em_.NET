@@ -16,6 +16,21 @@ namespace ExemploConstrutores.Models
                 this.mesValido = true;
             }
         }
+        public int Mes 
+        { 
+            get
+            {
+                return this.mes;
+            }
+            set
+            {
+                if(value > 0 && value <= 12)
+                {
+                    this.mes = value;
+                    this.mesValido = true;
+                }
+            }
+        }
         public void ApresentarMes()
         {
             if(this.mesValido)
