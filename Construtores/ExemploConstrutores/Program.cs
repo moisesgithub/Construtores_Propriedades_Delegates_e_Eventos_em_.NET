@@ -5,10 +5,17 @@ namespace ExemploConstrutores
 {
     class Program
     {
+        public delegate void Operacao(int x, int y);
         static void Main(string[] args)
         {
-            const double pi = 3.14;//uma constante não pode ser alterada
-            System.Console.WriteLine(pi);
+            //Operacao op = Calculadora.Somar;
+            //op(10, 20); ou
+            Operacao op = new Operacao(Calculadora.Subtrair);
+            op.Invoke(50, 20);
+
+                        
+            //const double pi = 3.14;//uma constante não pode ser alterada
+            //System.Console.WriteLine(pi);
             
             //Data data = new Data();
             //data.SetMes(20);
