@@ -11,6 +11,9 @@ namespace ExemploConstrutores
             //Operacao op = Calculadora.Somar;
             //op(10, 20); ou
             Operacao op = new Operacao(Calculadora.Subtrair);
+            op += Calculadora.Somar;
+            // adicionando uma extensão multi-cast Delegate, chamando a função somar e subtrair
+
             op.Invoke(50, 20);
 
                         
