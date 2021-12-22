@@ -2,8 +2,9 @@ namespace ExemploConstrutores.Models
 {
     public class Pessoa
     {
-        private string nome;
-        private string sobrenome;
+        private readonly string nome = "Moises";
+        //readonly só pode na inicialização e dentro do construtor
+        private readonly string sobrenome;
 
         /*public Pessoa()
 
@@ -18,7 +19,7 @@ namespace ExemploConstrutores.Models
             System.Console.WriteLine("Construtor da classe Pessoa");
         }
         public void Apresentar()
-        {
+        {            
             System.Console.WriteLine($"Olá, meu nome é {nome} {sobrenome}");
         }      
     }
