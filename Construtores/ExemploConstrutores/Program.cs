@@ -8,14 +8,16 @@ namespace ExemploConstrutores
         public delegate void Operacao(int x, int y);
         static void Main(string[] args)
         {
+            Matematica m = new Matematica(10, 20);
+            m.Somar();
+            
             //Operacao op = Calculadora.Somar;
             //op(10, 20); ou
-            Operacao op = new Operacao(Calculadora.Subtrair);
-            op += Calculadora.Somar;
+            //Operacao op = new Operacao(Calculadora.Subtrair);
+            //op += Calculadora.Somar;
             // adicionando uma extensão multi-cast Delegate, chamando a função somar e subtrair
 
-            op.Invoke(50, 20);
-
+            //op.Invoke(50, 20);
                         
             //const double pi = 3.14;//uma constante não pode ser alterada
             //System.Console.WriteLine(pi);
@@ -35,7 +37,6 @@ namespace ExemploConstrutores
 
             Log log2 = Log.GetInstance();
             System.Console.WriteLine(log2.PropriedadeLog);*/
-
             
             //Aluno p1 = new Aluno("Moises", "Pereira", "Teste");
             //p1.Apresentar();
